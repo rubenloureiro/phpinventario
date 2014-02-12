@@ -13,11 +13,20 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <div>Inventario</div>
-        Test de prueba de conexión
+        <div><b>Inventario</b></div>
+        Test de prueba de conexión.<br>
         <?php
         $bd = conectaDb();
-        echo "Conexión realizada con éxito";
+        $consulta = "SELECT * FROM equipo ORDER BY nombre";
+        $resultado = $bd -> query($consulta);
+        if (!$resultado) {
+            echo "No hay equipos.";
+        } else {
+            echo "Equipo<br> Nombre<br>";
+            foreach ($resultado as $registro) {
+                echo $registro['nombre']."<br>";
+            }
+        }
         $bd = null;
         ?>
     </body>
