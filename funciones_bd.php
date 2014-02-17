@@ -8,7 +8,7 @@
 function conectaDb()
 {
     try {
-        $db = new PDO("mysql:host=localhost", "root", "abc123.");
+        $db = new PDO("mysql:host=localhost; dbname=inventario", "root", "abc123.");
         $db->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
         return($db);
     } catch (PDOException $e) {

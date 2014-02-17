@@ -17,7 +17,7 @@ and open the template in the editor.
         Test de prueba de conexión.<br>
         <?php
         $bd = conectaDb();
-        $consulta = "SELECT * FROM equipo ORDER BY nombre";
+        $consulta = "SELECT * FROM equipos";
         $resultado = $bd -> query($consulta);
         if (!$resultado) {
             echo "No hay equipos.";
