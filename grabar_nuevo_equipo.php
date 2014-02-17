@@ -1,12 +1,8 @@
 <?php
 session_start();
 require_once 'funciones_validar.php';
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+// --- Funcion para validar datos --- //
 function validarDatosRegistro() {
     
     // ----- Datos enviados desde "formulario_nuevo_equipo.php" ----- //
@@ -33,12 +29,19 @@ function validarDatosRegistro() {
     // ----- Asignar a variables de sesión ----- //
     $_SESSION['datos'] = $datos;
     $_SESSION['errores'] = $errores;
+    $_SESSION['hayErrores'] = 
+            ($errores[0] || $errores[1] ||
+            $erroes[2] || $errores[3]);
     
 }
-
 
     
 //PRINCIPAL
 validarDatosRegistro();
-print_r($_SESSION['datos']);
-print_r($_SESSION['errores']);
+if ($_SESSION['hayErrores']) {
+    $url = "formulario_nuevo_equipo.php";
+    header('Location:'.$url);
+} else {
+        echo "Grabar Equipo en Base de Datos.";
+        
+}
