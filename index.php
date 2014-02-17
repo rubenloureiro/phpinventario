@@ -14,7 +14,9 @@ and open the template in the editor.
     </head>
     <body>
         <div><b>Inventario</b></div>
-        Test de prueba de conexión.<br>
+        <div>
+        <a href="formulario_nuevo_equipo.php">Nuevo Equipo</a>
+        </div>
         <?php
         $bd = conectaDb();
         $consulta = "SELECT * FROM equipos";
