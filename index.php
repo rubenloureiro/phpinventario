@@ -11,6 +11,7 @@ and open the template in the editor.
         <title>Inventario</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <link url="estilo.css" type="text/css" rel="stylesheet"/>
     </head>
     <body>
         <div><b>Inventario</b></div>
