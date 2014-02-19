@@ -1,22 +1,30 @@
 <?php
 
-define ('MSG_ERR_NOM', "Nombre incorrecto.");
-define ('MSG_ERR_DESC', "Descripción incorrecta.");
-define ('MSG_ERR_IP', "IP no válida.");
-define ('MSG_ERR_RAM', "RAM no válida.");
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
 
 function validarNombre($valor) {
+
     return TRUE;
 }
 
-function validarDesc ($valor) {
+function validarDesc($valor) {
+    
     return TRUE;
 }
 
-function validarIP ($valor) {
-    return TRUE; 
-}
-
-function validarRAM ($valor) {
+function validarIP($valor) {
+    
     return TRUE;
 }
+
+function validarRam($valor) {
+    return TRUE;
+}
+
+?>
