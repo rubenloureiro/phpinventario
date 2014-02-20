@@ -6,9 +6,9 @@
     </head>
     <body>
         <div><b>Registro Software Nuevo</b></div>
-        <form action="grabar_nuevo_software.php.php" method="GET">
+        <form action="grabar_nuevo_software.php" method="GET">
             <p>Título: <input type="text" name="titulo"/>
-            <p>URL: <input type="text" name="URL"/>
+            <p>URL: <input type="text" name="url"/>
             <p><input type="submit" value="Registrar"/></p>
         </form>
     </body>
