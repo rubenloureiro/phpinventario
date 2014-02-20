@@ -28,7 +28,7 @@ function validarDatosRegistro() {
 // PRINCIPAL //
 validarDatosRegistro();
 if ($_SESSION['hayErrores']) {
-    $urldestinpo = "formulario_nuevo_software.php";
+    $urldestino = "formulario_nuevo_software.php";
     header('Location:'.$urldestino);
 } else {
     $db = conectaBd();
