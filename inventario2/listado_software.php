@@ -12,7 +12,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <div><b>Listado de Software</b></div>
+        <div><b>Listado de Software</b></div><br>
         <?php
             $bd = conectaBd();
             $consulta = "SELECT * FROM software ORDER BY titulo";
@@ -32,6 +32,7 @@ and open the template in the editor.
             }
             
             $bd = null;
-        ?> 
+            ?><br>
+        <a href="formulario_nuevo_software.php">Registrar Software Nuevo</a>
     </body>
 </html>
