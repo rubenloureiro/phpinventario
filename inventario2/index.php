@@ -11,7 +11,8 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <div>INVENTARIO 2</div>
+        <div><b>INVENTARIO 2</b></div>
+         <a href="listado_software.php">Listado Software</a>
         <div>Acceso a Listado de Favoritos </div>
     </body>
 </html>
