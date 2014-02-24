@@ -65,7 +65,7 @@ and open the template in the editor.
                     echo "<div class 'error'>".MSG_ERR_URL."</div>";
                 }
                 ?>
-            <input type="submit" value="Enviar" />
+            <p><input type="submit" value="Enviar" /></p>
         </form>
     </body>
 </html>
