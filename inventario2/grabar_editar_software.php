@@ -1,7 +1,13 @@
 <?php
-
+session_start();
 require_once 'funciones_bd.php';
 require_once 'funciones.php';
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 
 function validarDatosRegistro() {
     // Recuperar datos Enviados desde formulario_nuevo_equipo.php
@@ -25,32 +31,37 @@ function validarDatosRegistro() {
     
 }
 
+
 // PRINCIPAL //
 validarDatosRegistro();
 if ($_SESSION['hayErrores']) {
-    $urldestino = "formulario_nuevo_software.php";
-    header('Location:'.$urldestino);
+    $url = "formulario_editar_software.php";
+    header('Location:'.$url);
 } else {
+
     $db = conectaBd();
-
     $titulo = $_SESSION['datos'][0];
-    $url = $_SESSION['datos'][1];
+    $url = $_SESSION['datos'][1];    
+    $id = $_SESSION['id'];
+
+   
     
-    $consulta = "INSERT INTO software (titulo, url) VALUES (:titulo, :url)";
+    $consulta = "UPDATE software 
+    set titulo = :titulo, 
+    url= :url 
+    WHERE id= :id";
+    
     $resultado = $db->prepare($consulta);
-    
-    if ($resultado->execute(array(":titulo" => $titulo, ":url" => $url))) {
-        unset ($_SESSION['datos']);
-        unset ($_SESSION['errores']);
-        unset ($_SESSION['hayErrores']);
-        $urldestino = "listado_software.php";
-        header('Location:'.$urldestino);
-}   else {
+    if ($resultado->execute(array(":titulo" => $titulo,
+        ":url" => $url, 
+        ":id" => $id))) {
+            $url = "listado_software.php";
+            header('Location:'.$url);
+    } else {
         print "<p>Error al crear el registro.</p>\n";
+    }
+
+    $db = null;
+
 }
-
-$db = null;
-
-}
-
 ?>

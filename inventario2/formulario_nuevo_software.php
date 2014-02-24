@@ -17,7 +17,7 @@ $_SESSION['hayErrores'] = (isset($_SESSION['hayErrores']))?
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <div><b>Registro Software Nuevo</b></div>
+        <div><b>Registro Software Nuevo</b></div></br>
         <form action="grabar_nuevo_software.php" method="GET">
             <div>Título: <input type="text" name="titulo" value="<?php echo $_SESSION['datos'][0]; ?>"/></div>
             <?php
@@ -30,7 +30,7 @@ $_SESSION['hayErrores'] = (isset($_SESSION['hayErrores']))?
                 if ($_SESSION['errores'][1]) {
                     echo "<div class 'error'>".MSG_ERR_URL."</div>";
                 }
-            ?>
+                ?>
             <p><input type="submit" value="Registrar"/></p>
         </form>
     </body>

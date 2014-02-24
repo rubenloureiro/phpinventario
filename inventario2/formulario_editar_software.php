@@ -42,12 +42,12 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Editar Software</title>
+        <title>Editar</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <div>Editar Software</div>
+        <div><b>Editar Software</b></div></br>
         <form action="grabar_editar_software.php" method="GET">
             <div>Titulo: <input type="text" name="titulo" 
                               value="<?php echo $_SESSION['datos'][0]; ?>"/>
@@ -57,14 +57,14 @@ and open the template in the editor.
                     echo "<div class 'error'>".MSG_ERR_TITULO."</div>";
                 }
             ?>
-            <div>URL <input type="text" name="url" 
+            <div>URL: <input type="text" name="url" 
                             value="<?php echo $_SESSION['datos'][1]; ?>"/></div>
             </div>
             <?php
                 if ($_SESSION['errores'][1]) {
                     echo "<div class 'error'>".MSG_ERR_URL."</div>";
                 }
-            ?>
+                ?>
             <input type="submit" value="Enviar" />
         </form>
     </body>
