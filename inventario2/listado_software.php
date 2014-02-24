@@ -21,11 +21,20 @@ and open the template in the editor.
                 echo "Error en la consulta.";
             } else {
                 echo "<table border=1>";
-                echo "<tr><th>Titulo</th><th>URL</th></tr>";
+                echo "<tr>";
+                echo "<th>Titulo</th>";
+                echo "<th>URL</th>";
+                echo "<th></th>";
+                echo "<th></th>";
+                echo "</tr>";
                 foreach($resultado as $registro) {
                     echo "<tr>";
                     echo "<td>".$registro['titulo']."</td>";
                     echo "<td>".$registro['url']."</td>";
+                    echo "<td>";
+                    $destino="formulario_editar_software.php?id=".$registro['id'];
+                    echo "<a href=".$destino.">Editar</a></td>";
+                    echo "<td>"."Eliminar"."</td>";
                     echo "</tr>";
                 }
                 echo "</table>";
