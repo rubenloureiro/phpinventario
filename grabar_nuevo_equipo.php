@@ -45,7 +45,7 @@ if ($_SESSION['hayErrores']) {
     $db = conectaBd();
     $consulta = "INSERT INTO Equipo (nombre, descripcion, ip, ram)
     VALUES ('"
-            .$_SESSION['datos'][0]."', '"
+           .$_SESSION['datos'][0]."', '"
            .$_SESSION['datos'][1]."', '"
            .$_SESSION['datos'][2]."', " 
            .$_SESSION['datos'][3].")";
