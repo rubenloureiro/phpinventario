@@ -12,7 +12,10 @@ and open the template in the editor.
     </head>
     <body>
         <div><b>INVENTARIO 3</b></div>
-         <a href="listado_software.php">Listado Software</a>
-        <div>Acceso a Listado de Favoritos </div>
+        <form action="login.php" method="POST">
+            <div>Login: <input type="text" name="login"/></div>
+            <div>Password: <input type="password" name="password"/></div>
+            <div><input type="submit" name="Entrar"/></div>
+        </form>
     </body>
 </html>

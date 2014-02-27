@@ -24,8 +24,8 @@ and open the template in the editor.
                 echo "<tr>";
                 echo "<th>Titulo</th>";
                 echo "<th>URL</th>";
-                echo "<th></th>";
-                echo "<th></th>";
+                echo "<th>Opción 1</th>";
+                echo "<th>Opción 2</th>";
                 echo "</tr>";
                 foreach($resultado as $registro) {
                     echo "<tr>";
