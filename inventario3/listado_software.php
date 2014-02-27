@@ -29,13 +29,17 @@ and open the template in the editor.
                 echo "<tr>";
                 echo "<th>Titulo</th>";
                 echo "<th>URL</th>";
-                echo "<th>Opción 1</th>";
-                echo "<th>Opción 1</th>";
+                echo "<th></th>";
+                echo "<th></th>";
                 echo "</tr>";
                 foreach($resultado as $registro) {
                     echo "<tr>";
                     echo "<td>".$registro['titulo']."</td>";
-                    echo "<td>".$registro['url']."</td>";
+                    echo "<td>";
+                    echo "<a href=".$registro['url']." target='_blank'>";
+                    echo $registro['url'];
+                    echo "</a>";
+                    echo "</td>";
                     echo "<td>";
                     $destino="formulario_editar_software.php?id=".$registro['id'];
                     echo "<a href=".$destino.">Editar</a></td>";
