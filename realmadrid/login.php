@@ -6,14 +6,10 @@ $login = (isset($_REQUEST['login']))?
 $password = (isset($_REQUEST['password']))?
             $_REQUEST['password']:"";
 
-
 if ($login == "" || $password == "") {
     $url = "index.php";
     header('Location:'.$url);
-    
-    
 }
-
 
 $bd = conectaBd();
 
@@ -29,7 +25,7 @@ if (!$resultado->execute(array(":login" => $login,":password" => $password))) {
            header('Location:'.$url);
        } else {
            $_SESSION['usuario'] = $registro['nombre'];
-           $url = "listado_software.php";
+           $url = "listado_jugadores.php";
            header('Location:'.$url);
        }
 }  

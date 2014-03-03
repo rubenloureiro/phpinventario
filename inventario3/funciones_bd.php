@@ -5,7 +5,7 @@
  */
 
 define('BD_USUARIO', 'root');
-define('BD_PASSWORD', 'abc123.');
+define('BD_PASSWORD', '');
 define('BD_NOME', 'inventario');
 define('BD_CONEX_PDO', 'mysql:host=localhost;dbname='.BD_NOME);
 

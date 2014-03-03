@@ -17,7 +17,7 @@ and open the template in the editor.
     </head>
     <body>
         <div>Listado de Software</div>
-        <div><a href="formulario_nuevo_software.php">Nuevo Equipo</a></div>
+        <div><a href="formulario_nuevo_software.php">Nuevo software</a></div>
         <?php
             $bd = conectaBd();
             $consulta = "SELECT * FROM software";

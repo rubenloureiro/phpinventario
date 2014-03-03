@@ -6,13 +6,12 @@
 
 define('BD_USUARIO', 'root');
 define('BD_PASSWORD', '');
-define('BD_NOME', 'inventario');
+define('BD_NOME', 'realmadrid');
 define('BD_CONEX_PDO', 'mysql:host=localhost;dbname='.BD_NOME);
 
 
-/**
- * 
- * @return type
+/*
+ * Función para conectarnos a una BBDD 
  */
 function conectaBd()
 {
@@ -26,7 +25,5 @@ function conectaBd()
         exit();
     }
 }
-
-
 
 ?>

@@ -55,6 +55,9 @@ if ($_SESSION['hayErrores']) {
     if ($resultado->execute(array(":titulo" => $titulo,
         ":url" => $url, 
         ":id" => $id))) {
+        unset ($_SESSION['datos']);
+        unset ($_SESSION['errores']);
+        unset ($_SESSION['hayErrores']);
             $url = "listado_software.php";
             header('Location:'.$url);
     } else {

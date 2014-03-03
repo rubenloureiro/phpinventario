@@ -15,6 +15,10 @@ $_SESSION['hayErrores'] = (isset($_SESSION['hayErrores']))?
 $_SESSION['id'] = (isset($_REQUEST['id']))?
             $_REQUEST['id']:$_SESSION['id'];
 
+
+/* Si fuera texto
+ *$consulta = "SELECT * FROM software WHERE nombre='".$_SESSION['nombre']."'";
+ */
 $bd = conectaBd();
 $consulta = "SELECT * FROM software WHERE id=".$_SESSION['id'];
 $resultado = $bd->query($consulta);

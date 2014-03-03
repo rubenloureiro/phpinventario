@@ -25,7 +25,7 @@ $_SESSION['hayErrores'] = (isset($_SESSION['hayErrores']))?
                     echo "<div class 'error'>".MSG_ERR_TITULO."</div>";
                 }
             ?>
-            <div>URL: <input type="text" name="url" vlaue="<?php echo $_SESSION['datos'][1]; ?>"/></div>
+            <div>URL: <input type="text" name="url" value="<?php echo $_SESSION['datos'][1]; ?>"/></div>
              <?php
                 if ($_SESSION['errores'][1]) {
                     echo "<div class 'error'>".MSG_ERR_URL."</div>";
