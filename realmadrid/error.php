@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <?php
    $msg_error = (isset($_REQUEST['msg_error']))?
             $_REQUEST['msg_error']:"";
@@ -11,19 +5,12 @@ and open the template in the editor.
 ?>
 <html>
     <head>
-        <title>Equipo</title>
+        <title>Real Madrid</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <div>Error</div>
+        <div>Ha ocurrido un error.</div>
         <div><a href="index.php">Volver al inicio</a></div>   
     </body>
-</html><?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+</html>
