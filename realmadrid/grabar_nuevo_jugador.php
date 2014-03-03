@@ -14,21 +14,28 @@ function validarDatosRegistro() {
     $datos[2] = (isset($_REQUEST['posicion']))?
             $_REQUEST['posicion']:"";
     $datos[3] = (isset($_REQUEST['pais']))?
-            $_REQUEST['pais']:"";    
+            $_REQUEST['pais']:"";
+    $datos[4] = (isset($_REQUEST['web']))?
+            $_REQUEST['web']:""; 
+    $datos[5] = (isset($_REQUEST['email']))?
+            $_REQUEST['email']:""; 
     
     //----- Validar ---- //
     $errores = Array();
     $errores[0] = !validarNombre($datos[0]);
     $errores[1] = !validarDorsal($datos[1]);
     $errores[2] = !validarPosicion($datos[2]);
-    $errores[3] = !validarPais($datos[3]);    
+    $errores[3] = !validarPais($datos[3]);
+    $errores[4] = !validarWeb($datos[4]);  
+    $errores[5] = !validarEmail($datos[5]);  
 
     // ----- Asignar a variables de Sesión ----//
     $_SESSION['datos'] = $datos;
     $_SESSION['errores'] = $errores;  
     $_SESSION['hayErrores'] = 
             ($errores[0] || $errores[1]
-            || $errores[2] || $errores[3]);
+            || $errores[2] || $errores[3]
+            || $errores[4] || $errores[5]);
     
 }
 
@@ -44,12 +51,14 @@ if ($_SESSION['hayErrores']) {
     $dorsal = $_SESSION['datos'][1];
     $posicion = $_SESSION['datos'][2];
     $pais = $_SESSION['datos'][3];
+    $web = $_SESSION['datos'][4];
+    $email = $_SESSION['datos'][5];
    
 // Consulta a ejecutar
-    $consulta = "INSERT INTO jugadores (nombre, dorsal, posicion, pais) VALUES (:nombre, :dorsal, :posicion, :pais)";
+    $consulta = "INSERT INTO jugadores (nombre, dorsal, posicion, pais, web, email) VALUES (:nombre, :dorsal, :posicion, :pais, :web, :email)";
     $resultado = $db->prepare($consulta);
     
-    if ($resultado->execute(array(":nombre" => $nombre, ":dorsal" => $dorsal, ":posicion" => $posicion, ":pais" => $pais))) {
+    if ($resultado->execute(array(":nombre" => $nombre, ":dorsal" => $dorsal, ":posicion" => $posicion, ":pais" => $pais, ":web" => $web, ":email" => $email))) {
         unset ($_SESSION['datos']);
         unset ($_SESSION['errores']);
         unset ($_SESSION['hayErrores']);

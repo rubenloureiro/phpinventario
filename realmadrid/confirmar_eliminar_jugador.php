@@ -33,7 +33,9 @@ if (!$resultado){
            $_SESSION['datos'][0] = $registro['nombre'];
            $_SESSION['datos'][1] = $registro['dorsal'];
            $_SESSION['datos'][2] = $registro['posicion'];
-           $_SESSION['datos'][3] = $registro['pais'];           
+           $_SESSION['datos'][3] = $registro['pais'];
+           $_SESSION['datos'][4] = $registro['web']; 
+           $_SESSION['datos'][5] = $registro['email']; 
            echo "<table border=1>";
            echo "<tr>";
            echo "<th>ID</th>";
@@ -41,6 +43,8 @@ if (!$resultado){
            echo "<th>Dorsal</th>";
            echo "<th>Posición</th>";
            echo "<th>País</th>";
+           echo "<th>Web</th>";
+           echo "<th>Email</th>";
            echo "<tr>";
            echo "<td>";
            echo $_SESSION['id'];
@@ -56,6 +60,12 @@ if (!$resultado){
            echo "</td>";
            echo "<td>";
            echo $registro['pais'];
+           echo "</td>";
+           echo "<td>";
+           echo $registro['web'];
+           echo "</td>";
+           echo "<td>";
+           echo $registro['email'];
            echo "</td>";
            echo "</table>";
        }

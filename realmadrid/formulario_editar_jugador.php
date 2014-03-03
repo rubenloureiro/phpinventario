@@ -5,9 +5,9 @@ require_once 'funciones_bd.php';
 
 // Estructura: campos del formulario
 $_SESSION['datos'] = (isset($_SESSION['datos']))?
-            $_SESSION['datos']:Array('','','','');
+            $_SESSION['datos']:Array('','','','','','');
 $_SESSION['errores'] = (isset($_SESSION['errores']))?
-            $_SESSION['errores']:Array(FALSE,FALSE,FALSE,FALSE);
+            $_SESSION['errores']:Array(FALSE,FALSE,FALSE,FALSE,FALSE,FALSE);
 $_SESSION['hayErrores'] = (isset($_SESSION['hayErrores']))?
             $_SESSION['hayErrores']:FALSE;
 
@@ -32,7 +32,9 @@ if (!$resultado) {
            $_SESSION['datos'][0] = $registro['nombre'];
            $_SESSION['datos'][1] = $registro['dorsal'];
            $_SESSION['datos'][2] = $registro['posicion'];
-           $_SESSION['datos'][3] = $registro['pais'];           
+           $_SESSION['datos'][3] = $registro['pais'];
+           $_SESSION['datos'][4] = $registro['web']; 
+           $_SESSION['datos'][5] = $registro['email']; 
        }
 }
 
@@ -77,6 +79,22 @@ if (!$resultado) {
             <?php
                 if ($_SESSION['errores'][3]) {
                     echo "<div class 'error'>".MSG_ERR_PAIS."</div>";
+                }
+                ?>
+            <div>Web: <input type="text" name="web" 
+                            value="<?php echo $_SESSION['datos'][4]; ?>"/></div>
+            </div>
+            <?php
+                if ($_SESSION['errores'][4]) {
+                    echo "<div class 'error'>".MSG_ERR_WEB."</div>";
+                }
+                ?>
+            <div>Email: <input type="text" name="email" 
+                            value="<?php echo $_SESSION['datos'][5]; ?>"/></div>
+            </div>
+            <?php
+                if ($_SESSION['errores'][5]) {
+                    echo "<div class 'error'>".MSG_ERR_MAIL."</div>";
                 }
                 ?>
             <p><input type="submit" value="Enviar" /></p>
