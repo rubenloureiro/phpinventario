@@ -11,5 +11,6 @@
             <div>Password: <input type="password" name="password"/></div>
             <div><input type="submit" name="Entrar"/></div>
         </form>
+        <a href="formulario_nuevo_usuario.php">Registar nuevo usuario</a>
     </body>
 </html>

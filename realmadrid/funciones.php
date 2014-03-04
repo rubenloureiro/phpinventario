@@ -7,7 +7,8 @@ define('MSG_ERR_DOR', "Error Dorsal.");
 define('MSG_ERR_POS', "Error Posición.");
 define('MSG_ERR_PAIS', "Error País.");
 define('MSG_ERR_WEB', "Error Web.");
-define('MSG_ERR_MAIL', "Error  Email.");
+define('MSG_ERR_MAIL', "Error Email.");
+
 
 // Funciones de validación
 function limpiar($valor) {

@@ -20,7 +20,7 @@ function validarDatosRegistro() {
     $datos[5] = (isset($_REQUEST['email']))?
             $_REQUEST['email']:""; 
     
-    //----- Validar ---- //
+    //---- Validar ---- //
     $errores = Array();
     $errores[0] = !validarNombre($datos[0]);
     $errores[1] = !validarDorsal($datos[1]);
