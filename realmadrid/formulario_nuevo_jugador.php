@@ -58,6 +58,7 @@ $_SESSION['hayErrores'] = (isset($_SESSION['hayErrores']))?
                 }
                 ?>
             <p><input type="submit" value="Registrar"/></p>
-        </form>
+        </form><br>
+        <a href="listado_jugadores.php">Volver al listado</a>
     </body>
 </html>

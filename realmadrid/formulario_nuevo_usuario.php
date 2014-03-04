@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once 'funciones_users.php';
 require_once 'funciones.php';
 
 // Estructura: campos del formulario
@@ -40,6 +39,7 @@ $_SESSION['hayErrores'] = (isset($_SESSION['hayErrores']))?
                 }
                 ?>
             <p><input type="submit" value="Registrar"/></p>
+            <a href="index.php">Volver al índice</a>
         </form>
     </body>
 </html>

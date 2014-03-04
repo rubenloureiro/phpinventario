@@ -1,5 +1,5 @@
 <?php
-require_once 'funciones_users.php';
+require_once 'funciones_bd.php';
 require_once 'funciones.php';
 
 // Recuperar datos enviados desde formulario_nuevo_usuario.php
@@ -7,7 +7,6 @@ function validarDatosRegistro() {
     $datos = Array();
     $datos[0] = (isset($_REQUEST['login']))?
             $_REQUEST['login']:"";
-    $datos[0] = limpiar($datos[0]);
     $datos[1] = (isset($_REQUEST['nombre']))?
             $_REQUEST['nombre']:"";
     $datos[2] = (isset($_REQUEST['password']))?
@@ -18,7 +17,7 @@ function validarDatosRegistro() {
     //----- Validar ---- //
     $errores = Array();
     $errores[0] = !validarLogin($datos[0]);
-    $errores[1] = !validarNombre($datos[1]);
+    $errores[1] = !validarNomUser($datos[1]);
     $errores[2] = !validarPassword($datos[2]);
 
     // ----- Asignar a variables de Sesión ----//

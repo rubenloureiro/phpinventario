@@ -99,6 +99,7 @@ if (!$resultado) {
                 }
                 ?>
             <p><input type="submit" value="Enviar" /></p>
-        </form>
+        </form><br>
+        <a href="listado_jugadores.php">Volver al listado</a>
     </body>
 </html>
