@@ -12,6 +12,7 @@
 <?php
 session_start();
 require_once 'funciones_bd.php';
+require_once 'head.php';
 
 // Sólo necesitamos eliminar por la clave principal
 $_SESSION['id'] = (isset ($_REQUEST['id']))?
