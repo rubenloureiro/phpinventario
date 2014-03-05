@@ -49,6 +49,7 @@ if ($_SESSION['hayErrores']) {
         unset ($_SESSION['datos']);
         unset ($_SESSION['errores']);
         unset ($_SESSION['hayErrores']);
+        //Podemos comentar $urldestino y header y poner antes un "echo $consulta o $resultado" para que nos muestre posibles errores
         $urldestino = "listado_usuarios.php";
         header('Location:'.$urldestino);
 }   else {
