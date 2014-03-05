@@ -25,9 +25,9 @@ if (!$resultado) {
        $url = "error.php?msg_error=Error_Consulta_Editar";
        header('Location:'.$url);
 } else { 
-       $registro = $resultado->fetch(); 
+       $registro = $resultado->fetch(); //*Fetch* carga el contenido de la *session*
        if(!$registro) {
-           $url = "error.php?msg_error=Error_Registro_Software_inexistente";
+           $url = "error.php?msg_error=Error_Registro_jugador_inexistente";
            header('Location:'.$url);
        } else {
            $_SESSION['datos'][0] = $registro['nombre'];
